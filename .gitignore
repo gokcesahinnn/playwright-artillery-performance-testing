@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# Report
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# npm package lock files
+package-lock.json
+yarn.lock

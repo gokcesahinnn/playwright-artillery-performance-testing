@@ -1,0 +1,21 @@
+config:
+  target: https://automationexercise.com/login
+  engines:
+    playwright: {}
+  processor: tests/artillery/signUp.js
+  phases:
+    # inject one user every second for 10 seconds
+     - name: constantArrival
+       duration: 10
+       arrivalRate: 1
+    # # Pause:
+    # - name: pause
+    #   pause: 1
+    # ramp up:
+    # - name: Ramp Up
+    #   duration: 10
+    #   arrivalRate: 1
+    #   rampTo: 3
+scenarios:
+  - engine: playwright
+    testFunction: artilleryScript
